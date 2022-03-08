@@ -11,14 +11,14 @@ import androidx.core.widget.doOnTextChanged
 
 class LoginActivity : AppCompatActivity() {
 
-    private val loginButton = findViewById<Button>(R.id.login_btn_login)
-    private val edtLogin = findViewById<EditText>(R.id.login_edt_username)
-    private val edtPassword = findViewById<EditText>(R.id.login_edt_password)
-    private val chk = findViewById<CheckBox>(R.id.login_chk_save_password)
+    private val loginButton by lazy { findViewById<Button>(R.id.login_btn_login) }
+    private val edtLogin by lazy { findViewById<EditText>(R.id.login_edt_username) }
+    private val edtPassword by lazy { findViewById<EditText>(R.id.login_edt_password) }
+    private val chk  by lazy { findViewById<CheckBox>(R.id.login_chk_save_password) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_login)
 
         setupUI()
 
@@ -27,10 +27,6 @@ class LoginActivity : AppCompatActivity() {
     private fun setupUI() {
         loginButton.setOnClickListener {
             verifyCredentials(edtLogin, edtPassword, chk)
-        }
-
-        edtLogin.setOnClickListener {
-            Toast.makeText(this@LoginActivity, "Cliquei no login", Toast.LENGTH_SHORT).show()
         }
 
         edtLogin.doOnTextChanged { _, _, _, _ ->
