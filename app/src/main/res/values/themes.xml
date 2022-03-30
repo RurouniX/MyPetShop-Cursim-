@@ -12,5 +12,16 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+
     </style>
+
+    <style name="button" parent="TextAppearance.AppCompat.Button">
+        <item name="android:text">@string/password</item>
+        <item name="android:backgroundTint">@color/btn_default</item>
+    </style>
+
+    <style name="text_default" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
 </resources>

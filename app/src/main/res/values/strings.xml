@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">My PetShop</string>
+    <string name="stay_auth">Manter autenticado</string>
+    <string name="password" translatable="false">Password</string>
 </resources>
